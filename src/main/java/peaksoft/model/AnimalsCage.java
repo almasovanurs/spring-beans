@@ -3,10 +3,14 @@ package peaksoft.model;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+
 @Component
 public class AnimalsCage {
 
     @Autowired
+    private Timer timer;
+
+  @Autowired
     private Animal animal;
 
     public void whatAnimalSay() {
@@ -15,5 +19,10 @@ public class AnimalsCage {
         System.out.println("At:");
         System.out.println(new Timer().getTime());
         System.out.println("________________________");
+
+    }
+
+    public Timer getTimer() {
+        return timer;
     }
 }
